@@ -15,7 +15,7 @@ User.create!(name:  "Admin User",
   name  = Faker::Name.name
   email = Faker::Internet.safe_email(name.split(" ")[0])
   password = "password"
-  User.create!(name:  name,
+  User.create(name:  name,
                email: email,
                password:              password,
                password_confirmation: password)
